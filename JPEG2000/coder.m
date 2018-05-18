@@ -3,7 +3,7 @@ clear all;
 close all;
 
 imTiger=imread('Tiger.jpg');
-N=8; %rozmiar bloczków
+N=8; %rozmiar bloczkÃ³w
 YCBCR = rgb2ycbcr(imTiger);
 [height, width, colour]=size(YCBCR);
 
@@ -46,16 +46,6 @@ for i=0:height/N-1
 end
 
 
-
-
-
-
-
-
-
-
-
-
 k=ycbcr2rgb(K/255);
 figure
 imshow(double(imTiger)/255-k);
@@ -64,4 +54,4 @@ imshow(k);
 
 blad=mean(mean(mean(double(imTiger)/255-k))).^2;
 imwrite(ycbcr2rgb(K/255),'Tigerr.jpg');
-dlmwrite('myFile.jms',huffmanarray)
+dlmwrite('myFile.jpg',huffmanarray)

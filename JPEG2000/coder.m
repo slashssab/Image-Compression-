@@ -54,4 +54,4 @@ imshow(k);
 
 blad=mean(mean(mean(double(imTiger)/255-k))).^2;
 imwrite(ycbcr2rgb(K/255),'Tigerr.jpg');
-dlmwrite('myFile.jpg',huffmanarray)
+dlmwrite('myFile.jmw',huffmanarray)

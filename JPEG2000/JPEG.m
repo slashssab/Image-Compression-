@@ -41,27 +41,7 @@ for i = 0:H/b - 1
 
 end
 
-         
-
- 
-
-
-
 X = fix(X./Q);                         
-
- 
-
-     
-
-       
-
- 
-
-
- 
-
-
- 
 
 M = read('jpg.rle.light', -1, 2);
 
@@ -76,7 +56,6 @@ unix('del jpg.rle.light');  write('jpg.rle.light', M);
 disp(length(M)/8, 'Compressed RLE [bytes] = '); % disp(T);
 
  
-
 %                            Decoder part
 
 % "De-quantization"
@@ -97,7 +76,6 @@ for i = 0:H/b - 1
 
 end
 
- 
 
 imshow(mat2gray(X - Y)); imwrite(mat2gray(X), 'osa-Y.png');
 
